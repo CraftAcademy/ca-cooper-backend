@@ -72,9 +72,8 @@ RSpec.describe 'User Registration', type: :request do
           password_confirmation: 'password'
         }, 
         headers: headers
-
-
       end
+      
       it 'returns an error message' do
         expect(response_json['errors']['email']).to eq ['has already been taken']
       end
